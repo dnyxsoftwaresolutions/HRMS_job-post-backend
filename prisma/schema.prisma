@@ -1,0 +1,37 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model JobPost {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  jobTitle        String
+  jobRole         String
+  jobDomain       String
+  skillsRequired  String[]
+  jobDescription  String
+  perksAndOffers  String[]
+  applied_field   Int      @default(0)
+  createdByEmail  String
+  createdBy       String?
+  createdAt       DateTime @default(now())
+}
+
+model SavedPreference {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  preferenceName  String   // <-- Add this new field
+  jobTitle        String
+  jobRole         String
+  jobDomain       String
+  skillsRequired  String[]
+  jobDescription  String
+  perksAndOffers  String[]
+  createdByEmail  String
+  createdBy       String?
+  createdAt       DateTime @default(now())
+}
