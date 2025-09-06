@@ -17,7 +17,7 @@ const swaggerDefinition = {
       description: 'Staging server',
     },
     {
-      url: 'https://hrms-job-post-backend.onrender.com/',
+      url: 'https://hrms-job-post-backend.onrender.com',
       description: 'Production server',
     },
   ],
