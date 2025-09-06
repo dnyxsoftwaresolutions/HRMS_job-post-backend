@@ -19,7 +19,8 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
   'https://hrms.dnyx.in',
-  'https://hrms.dnyx.in/recruitment/create-job'
+   'https://hrms-job-post-backend.onrender.com',
+  'https://hrms.dnyx.in/recruitment/create-job',
 ];
 
 // ✅ Configure CORS
